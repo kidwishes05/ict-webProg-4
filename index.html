@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прогноз погоды</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header class="header">
+<h1 class="title">Прогноз погоды</h1>
+<div class="toolbar">
+<button type="button" id="refresh-btn" class="btn">Обновить</button>
+<button type="button" id="add-btn" class="btn btn-primary">Добавить город</button>
+</div>
+</header>
+<nav class="tabs" id="tabs" aria-label="Список городов"></nav>
+<main id="content" class="content" aria-live="polite"></main>
+</div>
+
+<dialog id="city-dialog" class="dialog" aria-labelledby="dialog-title">
+<form id="city-form" class="dialog-form" novalidate autocomplete="off">
+<h2 id="dialog-title" class="dialog-title">Добавить город</h2>
+<p id="dialog-note" class="note" hidden></p>
+<label for="city-input" class="label">Название города</label>
+<div class="field" id="city-field">
+<input id="city-input" class="input" type="text" role="combobox" aria-expanded="false" aria-controls="suggestions" aria-autocomplete="list" aria-describedby="city-error" placeholder="Например, Москва" maxlength="80">
+<ul id="suggestions" class="suggestions" role="listbox" hidden></ul>
+</div>
+<p id="city-error" class="error" role="alert" hidden></p>
+<div class="actions">
+<button type="submit" id="submit-btn" class="btn btn-primary">Добавить</button>
+<button type="button" id="cancel-btn" class="btn">Отмена</button>
+</div>
+<button type="button" id="geo-btn" class="btn btn-wide" hidden>Использовать моё местоположение</button>
+</form>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
