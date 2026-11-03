@@ -84,8 +84,8 @@ input:focus-visible {
 }
 
 .btn-primary:disabled {
-  background: #9db9e8;
-  border-color: #9db9e8;
+  background: #b9e89d;
+  border-color: #b9e89d;
   color: #ffffff;
 }
 
